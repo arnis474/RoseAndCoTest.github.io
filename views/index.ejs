@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    Rose & Co
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#philosophy">Our Philosophy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#business-expansion">Business Expansion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#team">Meet the Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Logo Section -->
+    <div class="logo-container text-center my-4">
+        <img src="/images/logo.jpg" alt="">
+    </div>
+
+    <!-- Banner with Beauty Products -->
+    <div class="banner">
+        <img src="/images/BeautyProducts.jpg" class="img-fluid" alt="Beauty Products">
+        <div class="overlay-text">
+            <h1>We Scale Beauty Salons</h1>
+            <p>Increasing Market Share Via Advertising Services & Online Website Creation</p>
+            <a href="#contact" class="btn btn-primary mt-3">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="my-5">
+        <h2>Our Philosophy</h2>
+        <p>Here at Rose and Co., we believe in leading with pure value first and foremost. We stand for quality service delivered at a reasonable price, not extortionate retainers.</p>
+        <p>Communication is our cornerstone, it is the heartbeat for everything we do and is responsible for moving the needle and taking you to the next level.</p>
+        <p>Outsourcing work is not on our agenda, everything we do is in-housed to ensure the highest possible quality and smoothest delivery.</p>
+        <p>We work round the clock 24/7 - 365 days a year with some of the best sales & marketing talent in the industry.</p>
+        <img src="/images/NailPainting.jpg" class="img-fluid" alt="Nail Painting">
+    </section>
+
+    <!-- Business Expansion Section -->
+    <section id="business-expansion" class="my-5">
+        <h2>Business Expansion and Paid Advertising</h2>
+        <p>We help beauty salons increase their market share through effective advertising and stunning website creation. Our approach is focused, detailed, and tailored to exceed industry standards.</p>
+        <p>If you're looking for a generic solution that doesn't drive real progress, then you might want to look elsewhere.</p>
+        <p>But if you want a dedicated team that provides clear insights into your customer reach, and return on ad spend (ROAS), then you've come to the right place.</p>
+        <img src="/images/FacialExfoliation.jpg" class="img-fluid" alt="Facial Exfoliation">
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="my-5">
+        <h2>Meet the Team</h2>
+        <div class="carousel slide" id="testimonialsCarousel" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>Alan Chan has a remarkable ability to boost analytics and drive sales.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Kyle McClean excels at enhancing sales through strategic insights and data-driven decisions.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Jonathan Williamson Deronja creates bespoke website solutions tailored to our clients' unique needs.</p>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="my-5 text-center">
+        <h2>Contact Us</h2>
+        <form class="container" action="/contact" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="companyName">Company Name</label>
+                <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+            </div>
+            <div class="form-group">
+                <label for="position">Position</label>
+                <input type="text" class="form-control" id="position" name="position" placeholder="Position">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Rose & Co. All rights reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                <li class="list-inline-item"><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

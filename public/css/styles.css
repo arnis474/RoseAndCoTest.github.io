@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner .overlay-text h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+}
+
+.banner .overlay-text p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.banner .overlay-text a {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.banner .overlay-text a:hover {
+    background: #ff1493;
+}
+
+.container h1, .container h2 {
+    color: #ff69b4;
+}
+
+.container p {
+    color: #555;
+}
+
+.container img {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #ff69b4;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #ff1493;
+}
+
+.btn-secondary {
+    background-color: #ffc0cb;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #ffb6c1;
+}
+
+.btn-success {
+    background-color: #ffa07a;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #ff7f50;
+}
+
+#contact .form-control {
+    border: 2px solid #ff69b4;
+}
+
+#contact .btn-primary {
+    background-color: #ff69b4;
+    border: none;
+}
+
+#contact .btn-primary:hover {
+    background-color: #ff1493;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
