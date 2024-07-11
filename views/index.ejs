@@ -73,31 +73,7 @@
         <img src="/images/FacialExfoliation.jpg" class="img-fluid" alt="Facial Exfoliation">
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="my-5">
-        <h2>Meet the Team</h2>
-        <div class="carousel slide" id="testimonialsCarousel" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p>Alan Chan has a remarkable ability to boost analytics and drive sales.</p>
-                </div>
-                <div class="carousel-item">
-                    <p>Kyle McClean excels at enhancing sales through strategic insights and data-driven decisions.</p>
-                </div>
-                <div class="carousel-item">
-                    <p>Jonathan Williamson Deronja creates bespoke website solutions tailored to our clients' unique needs.</p>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
+   
 
     <!-- Contact Section -->
     <section id="contact" class="my-5 text-center">
@@ -144,6 +120,8 @@
                 <li class="list-inline-item"><a href="#">Terms of Use</a></li>
                 <li class="list-inline-item"><a href="#">Sitemap</a></li>
             </ul>
+            <a href="https://www.facebook.com" class="btn btn-primary mt-3" target="_blank">Follow Us on Facebook</a>
+        </div>
         </div>
     </footer>
 
@@ -152,5 +130,35 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
+    
+    <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('<%= emailjs_user_id %>'); // Initialize with the passed user ID
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = {
+                to_name: 'Rosey Co', // Replace with the actual recipient's name if needed
+                from_name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+                message: `Email: ${document.getElementById('email').value}\n
+                          Phone: ${document.getElementById('phone').value}\n
+                          Company: ${document.getElementById('companyName').value}\n
+                          Position: ${document.getElementById('position').value}`
+            };
+
+            emailjs.send('<%= emailjs_service_id %>', '<%= emailjs_template_id %>', formData)
+                .then((result) => {
+                    console.log('Email successfully sent!', result.text);
+                    alert('Email sent successfully!');
+                }, (error) => {
+                    console.log('Failed to send email:', error.text);
+                    alert('Failed to send email. Please try again later.');
+                });
+        });
+    </script>
 </body>
 </html>
