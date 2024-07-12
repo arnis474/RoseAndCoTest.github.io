@@ -75,41 +75,43 @@
 
    
 
-    <!-- Contact Section -->
-    <section id="contact" class="my-5 text-center">
-        <h2>Contact Us</h2>
-        <form class="container" action="/contact" method="POST">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
-                </div>
+   
+   <!-- Contact Section -->
+   <section id="contact" class="my-5 text-center">
+    <h2>Contact Us</h2>
+    <form id="contact-form" class="container">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
-                </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
             </div>
-            <div class="form-group">
-                <label for="companyName">Company Name</label>
-                <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
-            <div class="form-group">
-                <label for="position">Position</label>
-                <input type="text" class="form-control" id="position" name="position" placeholder="Position">
+            <div class="form-group col-md-6">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </section>
+        </div>
+        <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+            <label for="position">Position</label>
+            <input type="text" class="form-control" id="position" name="position" placeholder="Position">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3">
@@ -120,6 +122,9 @@
                 <li class="list-inline-item"><a href="#">Terms of Use</a></li>
                 <li class="list-inline-item"><a href="#">Sitemap</a></li>
             </ul>
+            <a href="https://www.facebook.com/RoseyCoUK/" target="_blank">
+                <img src="/images/FBLogo.png" alt="Facebook" style="width: 32px; height: 32px;">
+            </a>
             <a href="https://www.facebook.com" class="btn btn-primary mt-3" target="_blank">Follow Us on Facebook</a>
         </div>
         </div>
